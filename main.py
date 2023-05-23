@@ -1,12 +1,13 @@
 import streamlit as st
 import openai as ai
 import logging
+import os
 
 # Set up logging
 logging.basicConfig(level=logging.INFO)
 
 # Set OpenAI API key
-ai.api_key = "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"
+ai.api_key = os.environ["API_KEY"]
 
 # Define user messages
 messages = [
